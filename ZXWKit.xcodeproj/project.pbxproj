@@ -24,6 +24,9 @@
 		EB9E25761C589E3000D1CADF /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25701C589E3000D1CADF /* UIView+Animations.m */; };
 		EB9E25771C589E3000D1CADF /* UIView+Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25711C589E3000D1CADF /* UIView+Layer.h */; };
 		EB9E25781C589E3000D1CADF /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25721C589E3000D1CADF /* UIView+Layer.m */; };
+		EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25811C589F4B00D1CADF /* WebViewJSBridge.h */; };
+		EB9E25851C589F4B00D1CADF /* WebViewJSBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = EB9E25821C589F4B00D1CADF /* WebViewJSBridge.js */; };
+		EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		EB9E25701C589E3000D1CADF /* UIView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animations.m"; sourceTree = "<group>"; };
 		EB9E25711C589E3000D1CADF /* UIView+Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layer.h"; sourceTree = "<group>"; };
 		EB9E25721C589E3000D1CADF /* UIView+Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layer.m"; sourceTree = "<group>"; };
+		EB9E25811C589F4B00D1CADF /* WebViewJSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJSBridge.h; sourceTree = "<group>"; };
+		EB9E25821C589F4B00D1CADF /* WebViewJSBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = WebViewJSBridge.js; sourceTree = "<group>"; };
+		EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJSBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		EB0785591C561E5500966D30 /* ZXWKit */ = {
 			isa = PBXGroup;
 			children = (
+				EB9E25791C589F0D00D1CADF /* Tools */,
 				EB9E25601C589E1E00D1CADF /* Base */,
 				EB0785711C5626E000966D30 /* UI */,
 				EB07855A1C561E5500966D30 /* ZXWKit.h */,
@@ -144,6 +151,24 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		EB9E25791C589F0D00D1CADF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				EB9E25801C589F4B00D1CADF /* WebViewBridge */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		EB9E25801C589F4B00D1CADF /* WebViewBridge */ = {
+			isa = PBXGroup;
+			children = (
+				EB9E25811C589F4B00D1CADF /* WebViewJSBridge.h */,
+				EB9E25821C589F4B00D1CADF /* WebViewJSBridge.js */,
+				EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */,
+			);
+			path = WebViewBridge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -151,6 +176,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */,
 				EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */,
 				EB0785741C5626F900966D30 /* UIView+Base.h in Headers */,
 				EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */,
@@ -241,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9E25851C589F4B00D1CADF /* WebViewJSBridge.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +289,7 @@
 				EB9E25761C589E3000D1CADF /* UIView+Animations.m in Sources */,
 				EB0785751C5626F900966D30 /* UIView+Base.m in Sources */,
 				EB9E256A1C589E1E00D1CADF /* UIColor+Extern.m in Sources */,
+				EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */,
 				EB9E25741C589E3000D1CADF /* UITableView+CalculateCellHeight.m in Sources */,
 				EB9E25681C589E1E00D1CADF /* NSData+Encryption.m in Sources */,
 				EB9E25781C589E3000D1CADF /* UIView+Layer.m in Sources */,
