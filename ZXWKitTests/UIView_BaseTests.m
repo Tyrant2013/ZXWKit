@@ -7,7 +7,7 @@
 //
 
 #import "UIView_BaseTests.h"
-#import "UIView+Base.h"
+#import <ZXWKit/UIView+Base.h>
 
 @implementation UIView_BaseTest
 

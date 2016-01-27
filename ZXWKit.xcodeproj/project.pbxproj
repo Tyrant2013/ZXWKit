@@ -12,19 +12,19 @@
 		EB0785671C561E5500966D30 /* ZXWKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0785661C561E5500966D30 /* ZXWKitTests.m */; };
 		EB0785741C5626F900966D30 /* UIView+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0785721C5626F900966D30 /* UIView+Base.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB0785751C5626F900966D30 /* UIView+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0785731C5626F900966D30 /* UIView+Base.m */; };
-		EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25611C589E1E00D1CADF /* NSData+Encryption.h */; };
+		EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25611C589E1E00D1CADF /* NSData+Encryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E25681C589E1E00D1CADF /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25621C589E1E00D1CADF /* NSData+Encryption.m */; };
-		EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25631C589E1E00D1CADF /* UIColor+Extern.h */; };
+		EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25631C589E1E00D1CADF /* UIColor+Extern.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E256A1C589E1E00D1CADF /* UIColor+Extern.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25641C589E1E00D1CADF /* UIColor+Extern.m */; };
-		EB9E256B1C589E1E00D1CADF /* UIImage+Effect.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25651C589E1E00D1CADF /* UIImage+Effect.h */; };
+		EB9E256B1C589E1E00D1CADF /* UIImage+Effect.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25651C589E1E00D1CADF /* UIImage+Effect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E256C1C589E1E00D1CADF /* UIImage+Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25661C589E1E00D1CADF /* UIImage+Effect.m */; };
-		EB9E25731C589E3000D1CADF /* UITableView+CalculateCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E256D1C589E3000D1CADF /* UITableView+CalculateCellHeight.h */; };
+		EB9E25731C589E3000D1CADF /* UITableView+CalculateCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E256D1C589E3000D1CADF /* UITableView+CalculateCellHeight.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E25741C589E3000D1CADF /* UITableView+CalculateCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E256E1C589E3000D1CADF /* UITableView+CalculateCellHeight.m */; };
-		EB9E25751C589E3000D1CADF /* UIView+Animations.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E256F1C589E3000D1CADF /* UIView+Animations.h */; };
+		EB9E25751C589E3000D1CADF /* UIView+Animations.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E256F1C589E3000D1CADF /* UIView+Animations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E25761C589E3000D1CADF /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25701C589E3000D1CADF /* UIView+Animations.m */; };
-		EB9E25771C589E3000D1CADF /* UIView+Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25711C589E3000D1CADF /* UIView+Layer.h */; };
+		EB9E25771C589E3000D1CADF /* UIView+Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25711C589E3000D1CADF /* UIView+Layer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E25781C589E3000D1CADF /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25721C589E3000D1CADF /* UIView+Layer.m */; };
-		EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25811C589F4B00D1CADF /* WebViewJSBridge.h */; };
+		EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25811C589F4B00D1CADF /* WebViewJSBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E25851C589F4B00D1CADF /* WebViewJSBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = EB9E25821C589F4B00D1CADF /* WebViewJSBridge.js */; };
 		EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */; };
 		EB9E25891C58A05C00D1CADF /* UIControl+Track.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25881C58A05C00D1CADF /* UIControl+Track.m */; };
@@ -194,13 +194,13 @@
 			files = (
 				EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */,
 				EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */,
-				EB0785741C5626F900966D30 /* UIView+Base.h in Headers */,
 				EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */,
 				EB9E25751C589E3000D1CADF /* UIView+Animations.h in Headers */,
-				EB07855B1C561E5500966D30 /* ZXWKit.h in Headers */,
 				EB9E25771C589E3000D1CADF /* UIView+Layer.h in Headers */,
 				EB9E25731C589E3000D1CADF /* UITableView+CalculateCellHeight.h in Headers */,
 				EB9E256B1C589E1E00D1CADF /* UIImage+Effect.h in Headers */,
+				EB0785741C5626F900966D30 /* UIView+Base.h in Headers */,
+				EB07855B1C561E5500966D30 /* ZXWKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
