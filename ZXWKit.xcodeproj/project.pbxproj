@@ -28,6 +28,7 @@
 		EB9E25851C589F4B00D1CADF /* WebViewJSBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = EB9E25821C589F4B00D1CADF /* WebViewJSBridge.js */; };
 		EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */; };
 		EB9E25891C58A05C00D1CADF /* UIControl+Track.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25881C58A05C00D1CADF /* UIControl+Track.m */; };
+		EB9E258C1C58A0F400D1CADF /* UIView_BaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E258B1C58A0F400D1CADF /* UIView_BaseTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		EB9E25821C589F4B00D1CADF /* WebViewJSBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = WebViewJSBridge.js; sourceTree = "<group>"; };
 		EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJSBridge.m; sourceTree = "<group>"; };
 		EB9E25881C58A05C00D1CADF /* UIControl+Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Track.m"; sourceTree = "<group>"; };
+		EB9E258A1C58A0F400D1CADF /* UIView_BaseTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_BaseTests.h; sourceTree = "<group>"; };
+		EB9E258B1C58A0F400D1CADF /* UIView_BaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_BaseTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 			children = (
 				EB0785661C561E5500966D30 /* ZXWKitTests.m */,
 				EB0785681C561E5500966D30 /* Info.plist */,
+				EB9E258A1C58A0F400D1CADF /* UIView_BaseTests.h */,
+				EB9E258B1C58A0F400D1CADF /* UIView_BaseTests.m */,
 			);
 			path = ZXWKitTests;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB0785671C561E5500966D30 /* ZXWKitTests.m in Sources */,
+				EB9E258C1C58A0F400D1CADF /* UIView_BaseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
