@@ -27,6 +27,7 @@
 		EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25811C589F4B00D1CADF /* WebViewJSBridge.h */; };
 		EB9E25851C589F4B00D1CADF /* WebViewJSBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = EB9E25821C589F4B00D1CADF /* WebViewJSBridge.js */; };
 		EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */; };
+		EB9E25891C58A05C00D1CADF /* UIControl+Track.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25881C58A05C00D1CADF /* UIControl+Track.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		EB9E25811C589F4B00D1CADF /* WebViewJSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJSBridge.h; sourceTree = "<group>"; };
 		EB9E25821C589F4B00D1CADF /* WebViewJSBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = WebViewJSBridge.js; sourceTree = "<group>"; };
 		EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJSBridge.m; sourceTree = "<group>"; };
+		EB9E25881C58A05C00D1CADF /* UIControl+Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Track.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		EB9E25791C589F0D00D1CADF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EB9E25871C58A04600D1CADF /* Track */,
 				EB9E25801C589F4B00D1CADF /* WebViewBridge */,
 			);
 			path = Tools;
@@ -167,6 +170,14 @@
 				EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */,
 			);
 			path = WebViewBridge;
+			sourceTree = "<group>";
+		};
+		EB9E25871C58A04600D1CADF /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				EB9E25881C58A05C00D1CADF /* UIControl+Track.m */,
+			);
+			path = Track;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9E25891C58A05C00D1CADF /* UIControl+Track.m in Sources */,
 				EB9E256C1C589E1E00D1CADF /* UIImage+Effect.m in Sources */,
 				EB9E25761C589E3000D1CADF /* UIView+Animations.m in Sources */,
 				EB0785751C5626F900966D30 /* UIView+Base.m in Sources */,
