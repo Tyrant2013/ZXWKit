@@ -31,6 +31,8 @@
 		EB9E258C1C58A0F400D1CADF /* UIView_BaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E258B1C58A0F400D1CADF /* UIView_BaseTests.m */; };
 		EB9E25901C59A87800D1CADF /* UIFont+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E258E1C59A87800D1CADF /* UIFont+Base.h */; };
 		EB9E25911C59A87800D1CADF /* UIFont+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E258F1C59A87800D1CADF /* UIFont+Base.m */; };
+		EB9E25941C59B35E00D1CADF /* NSString+Path.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25921C59B35E00D1CADF /* NSString+Path.h */; };
+		EB9E25951C59B35E00D1CADF /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25931C59B35E00D1CADF /* NSString+Path.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		EB9E258B1C58A0F400D1CADF /* UIView_BaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_BaseTests.m; sourceTree = "<group>"; };
 		EB9E258E1C59A87800D1CADF /* UIFont+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Base.h"; sourceTree = "<group>"; };
 		EB9E258F1C59A87800D1CADF /* UIFont+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Base.m"; sourceTree = "<group>"; };
+		EB9E25921C59B35E00D1CADF /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
+		EB9E25931C59B35E00D1CADF /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 				EB9E25661C589E1E00D1CADF /* UIImage+Effect.m */,
 				EB9E258E1C59A87800D1CADF /* UIFont+Base.h */,
 				EB9E258F1C59A87800D1CADF /* UIFont+Base.m */,
+				EB9E25921C59B35E00D1CADF /* NSString+Path.h */,
+				EB9E25931C59B35E00D1CADF /* NSString+Path.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 				EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */,
 				EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */,
 				EB9E25901C59A87800D1CADF /* UIFont+Base.h in Headers */,
+				EB9E25941C59B35E00D1CADF /* NSString+Path.h in Headers */,
 				EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */,
 				EB9E25751C589E3000D1CADF /* UIView+Animations.h in Headers */,
 				EB9E25771C589E3000D1CADF /* UIView+Layer.h in Headers */,
@@ -311,6 +318,7 @@
 				EB9E25891C58A05C00D1CADF /* UIControl+Track.m in Sources */,
 				EB9E256C1C589E1E00D1CADF /* UIImage+Effect.m in Sources */,
 				EB9E25761C589E3000D1CADF /* UIView+Animations.m in Sources */,
+				EB9E25951C59B35E00D1CADF /* NSString+Path.m in Sources */,
 				EB0785751C5626F900966D30 /* UIView+Base.m in Sources */,
 				EB9E256A1C589E1E00D1CADF /* UIColor+Extern.m in Sources */,
 				EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */,
