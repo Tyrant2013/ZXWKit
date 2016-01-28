@@ -29,6 +29,8 @@
 		EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25831C589F4B00D1CADF /* WebViewJSBridge.m */; };
 		EB9E25891C58A05C00D1CADF /* UIControl+Track.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25881C58A05C00D1CADF /* UIControl+Track.m */; };
 		EB9E258C1C58A0F400D1CADF /* UIView_BaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E258B1C58A0F400D1CADF /* UIView_BaseTests.m */; };
+		EB9E25901C59A87800D1CADF /* UIFont+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E258E1C59A87800D1CADF /* UIFont+Base.h */; };
+		EB9E25911C59A87800D1CADF /* UIFont+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E258F1C59A87800D1CADF /* UIFont+Base.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		EB9E25881C58A05C00D1CADF /* UIControl+Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Track.m"; sourceTree = "<group>"; };
 		EB9E258A1C58A0F400D1CADF /* UIView_BaseTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_BaseTests.h; sourceTree = "<group>"; };
 		EB9E258B1C58A0F400D1CADF /* UIView_BaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_BaseTests.m; sourceTree = "<group>"; };
+		EB9E258E1C59A87800D1CADF /* UIFont+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Base.h"; sourceTree = "<group>"; };
+		EB9E258F1C59A87800D1CADF /* UIFont+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Base.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 				EB9E25641C589E1E00D1CADF /* UIColor+Extern.m */,
 				EB9E25651C589E1E00D1CADF /* UIImage+Effect.h */,
 				EB9E25661C589E1E00D1CADF /* UIImage+Effect.m */,
+				EB9E258E1C59A87800D1CADF /* UIFont+Base.h */,
+				EB9E258F1C59A87800D1CADF /* UIFont+Base.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 			files = (
 				EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */,
 				EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */,
+				EB9E25901C59A87800D1CADF /* UIFont+Base.h in Headers */,
 				EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */,
 				EB9E25751C589E3000D1CADF /* UIView+Animations.h in Headers */,
 				EB9E25771C589E3000D1CADF /* UIView+Layer.h in Headers */,
@@ -308,6 +315,7 @@
 				EB9E256A1C589E1E00D1CADF /* UIColor+Extern.m in Sources */,
 				EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */,
 				EB9E25741C589E3000D1CADF /* UITableView+CalculateCellHeight.m in Sources */,
+				EB9E25911C59A87800D1CADF /* UIFont+Base.m in Sources */,
 				EB9E25681C589E1E00D1CADF /* NSData+Encryption.m in Sources */,
 				EB9E25781C589E3000D1CADF /* UIView+Layer.m in Sources */,
 			);
