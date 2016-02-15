@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class UIBezierPath;
+@class UIFont;
 
 @interface NSString (Path)
 
