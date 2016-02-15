@@ -11,8 +11,8 @@
 @interface ZXWCircleProgressView : UIView
 
 @property (nonatomic, assign) CGFloat                           progress;
-@property (nonatomic, assign) CGFloat                           strokeWidth;
-@property (nonatomic, strong) UIColor                           *strokeColor;
-@property (nonatomic, strong) UIColor                           *backgroundColor;
+@property (nonatomic, assign) CGFloat                           circleStrokeWidth;
+@property (nonatomic, strong) UIColor                           *circleStrokeColor;
+@property (nonatomic, strong) UIColor                           *circleBackgroundColor;
 
 @end
