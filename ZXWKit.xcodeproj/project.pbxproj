@@ -15,6 +15,8 @@
 		EB07EA301C71787B00510837 /* ZXWCircleProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = EB07EA2E1C71787B00510837 /* ZXWCircleProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB07EA311C71787B00510837 /* ZXWCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB07EA2F1C71787B00510837 /* ZXWCircleProgressView.m */; };
 		EB2B29F51C5B170B0079DEB4 /* NSStringPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2B29F41C5B170B0079DEB4 /* NSStringPathTests.m */; };
+		EB3AAEAE1C73236500D52A66 /* UIImage+FitSize.h in Headers */ = {isa = PBXBuildFile; fileRef = EB3AAEAC1C73236500D52A66 /* UIImage+FitSize.h */; };
+		EB3AAEAF1C73236500D52A66 /* UIImage+FitSize.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3AAEAD1C73236500D52A66 /* UIImage+FitSize.m */; };
 		EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25611C589E1E00D1CADF /* NSData+Encryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E25681C589E1E00D1CADF /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25621C589E1E00D1CADF /* NSData+Encryption.m */; };
 		EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25631C589E1E00D1CADF /* UIColor+Extern.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,6 +63,8 @@
 		EB07EA2F1C71787B00510837 /* ZXWCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXWCircleProgressView.m; sourceTree = "<group>"; };
 		EB2B29F31C5B170B0079DEB4 /* NSStringPathTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringPathTests.h; sourceTree = "<group>"; };
 		EB2B29F41C5B170B0079DEB4 /* NSStringPathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringPathTests.m; sourceTree = "<group>"; };
+		EB3AAEAC1C73236500D52A66 /* UIImage+FitSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FitSize.h"; sourceTree = "<group>"; };
+		EB3AAEAD1C73236500D52A66 /* UIImage+FitSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FitSize.m"; sourceTree = "<group>"; };
 		EB9E25611C589E1E00D1CADF /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
 		EB9E25621C589E1E00D1CADF /* NSData+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
 		EB9E25631C589E1E00D1CADF /* UIColor+Extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extern.h"; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				EB9E25641C589E1E00D1CADF /* UIColor+Extern.m */,
 				EB9E25651C589E1E00D1CADF /* UIImage+Effect.h */,
 				EB9E25661C589E1E00D1CADF /* UIImage+Effect.m */,
+				EB3AAEAC1C73236500D52A66 /* UIImage+FitSize.h */,
+				EB3AAEAD1C73236500D52A66 /* UIImage+FitSize.m */,
 				EB9E258E1C59A87800D1CADF /* UIFont+Base.h */,
 				EB9E258F1C59A87800D1CADF /* UIFont+Base.m */,
 				EB9E25921C59B35E00D1CADF /* NSString+Path.h */,
@@ -225,6 +231,7 @@
 			files = (
 				EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */,
 				EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */,
+				EB3AAEAE1C73236500D52A66 /* UIImage+FitSize.h in Headers */,
 				EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */,
 				EB9E25751C589E3000D1CADF /* UIView+Animations.h in Headers */,
 				EB9E25771C589E3000D1CADF /* UIView+Layer.h in Headers */,
@@ -346,6 +353,7 @@
 				EB9E25741C589E3000D1CADF /* UITableView+CalculateCellHeight.m in Sources */,
 				EB9E25911C59A87800D1CADF /* UIFont+Base.m in Sources */,
 				EB9E25681C589E1E00D1CADF /* NSData+Encryption.m in Sources */,
+				EB3AAEAF1C73236500D52A66 /* UIImage+FitSize.m in Sources */,
 				EB9E25781C589E3000D1CADF /* UIView+Layer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
