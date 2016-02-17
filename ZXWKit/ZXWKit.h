@@ -18,6 +18,7 @@ FOUNDATION_EXPORT const unsigned char ZXWKitVersionString[];
 
 /// CustomView
 #import <ZXWKit/ZXWCircleProgressView.h>
+#import <ZXWKit/ZXWAlertView.h>
 
 /// Tool
 #import <ZXWKit/WebViewJSBridge.h>
