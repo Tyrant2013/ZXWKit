@@ -13,6 +13,10 @@ static NSUInteger const kButtonMiddleIndex                      = 2;
 static NSUInteger const kButtonRightIndex                       = 3;
 static CGFloat const    kButtonHeight                           = 50.0f;
 static CGFloat const    kButtonWidthMultiplier                  = 0.5f;
+static CGFloat const    kButtonTitleSize                        = 20.0f;
+static CGFloat const    kTitleFontSize                          = 20.0f;
+static CGFloat const    kAlertViewCornerRadius                  = 20.0f;
+static CGFloat const    kAlertViewMargin                        = 50.0f;
 
 @interface ZXWAlertView()
 
@@ -38,7 +42,7 @@ static CGFloat const    kButtonWidthMultiplier                  = 0.5f;
         self.middleButtonTitle = middleButton;
         self.rightButtonTitle = rightButton;
         [self setupSubviews];
-        self.layer.cornerRadius = 10.0f;
+        self.layer.cornerRadius = kAlertViewCornerRadius;
         self.clipsToBounds = YES;
     }
     return self;
@@ -56,7 +60,7 @@ static CGFloat const    kButtonWidthMultiplier                  = 0.5f;
     if (self.title) {
         UILabel *label = [[UILabel alloc] init];
         label.text = self.title;
-        label.font = [UIFont systemFontOfSize:20.0f];
+        label.font = [UIFont systemFontOfSize:kTitleFontSize];
         label.textColor = [UIColor darkTextColor];
         label.textAlignment = NSTextAlignmentCenter;
         [label sizeToFit];
@@ -129,9 +133,10 @@ static CGFloat const    kButtonWidthMultiplier                  = 0.5f;
         button.tag = kButtonRightIndex;
         [self addSubview:button];
         
+        CGFloat offset = 1.0f / [UIScreen mainScreen].scale;
         NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
         NSLayoutConstraint *trail = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
-        NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:kButtonWidthMultiplier constant:0];
+        NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:kButtonWidthMultiplier constant:offset];
         NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:kButtonHeight];
         
         button.translatesAutoresizingMaskIntoConstraints = NO;
@@ -141,11 +146,11 @@ static CGFloat const    kButtonWidthMultiplier                  = 0.5f;
 }
 
 - (UIButton *)buttonWithTitle:(NSString *)title {
-    UIButton *button = [[UIButton alloc] init];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.backgroundColor = [UIColor whiteColor];
+    button.titleLabel.font = [UIFont systemFontOfSize:kButtonTitleSize];
     button.layer.borderColor = [UIColor lightGrayColor].CGColor;
     button.layer.borderWidth = 1.0f;
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:title forState:UIControlStateNormal];
     return button;
@@ -165,7 +170,7 @@ static CGFloat const    kButtonWidthMultiplier                  = 0.5f;
     })];
     
     self.backgroundColor = [UIColor whiteColor];
-    self.layer.borderWidth = 1.0f;
+    self.layer.borderWidth = 1.0f / [UIScreen mainScreen].scale;
     self.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     [_showWindow addSubview:self];
@@ -174,8 +179,8 @@ static CGFloat const    kButtonWidthMultiplier                  = 0.5f;
 
 - (void)setupLayoutConstrait {
     NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
-    NSLayoutConstraint *lead = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeLeading multiplier:1 constant:50];
-    NSLayoutConstraint *trail = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeTrailing multiplier:1 constant:-50];
+    NSLayoutConstraint *lead = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeLeading multiplier:1 constant:kAlertViewMargin];
+    NSLayoutConstraint *trail = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeTrailing multiplier:1 constant:-kAlertViewMargin];
     
     self.translatesAutoresizingMaskIntoConstraints = NO;
     [self.showWindow addConstraints:@[centerY, lead, trail]];
