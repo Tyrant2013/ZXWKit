@@ -40,6 +40,12 @@
 		EB9E25911C59A87800D1CADF /* UIFont+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E258F1C59A87800D1CADF /* UIFont+Base.m */; };
 		EB9E25941C59B35E00D1CADF /* NSString+Path.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25921C59B35E00D1CADF /* NSString+Path.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E25951C59B35E00D1CADF /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25931C59B35E00D1CADF /* NSString+Path.m */; };
+		EBD4A5E41C76FDA9004ACF0D /* NSString+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD4A5E21C76FDA9004ACF0D /* NSString+Extern.h */; };
+		EBD4A5E51C76FDA9004ACF0D /* NSString+Extern.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD4A5E31C76FDA9004ACF0D /* NSString+Extern.m */; };
+		EBD4A5E91C76FED7004ACF0D /* MediaTools.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD4A5E71C76FED7004ACF0D /* MediaTools.h */; };
+		EBD4A5EA1C76FED7004ACF0D /* MediaTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD4A5E81C76FED7004ACF0D /* MediaTools.m */; };
+		EBD4A5F11C77007D004ACF0D /* UIImage+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD4A5EF1C77007D004ACF0D /* UIImage+Extern.h */; };
+		EBD4A5F21C77007D004ACF0D /* UIImage+Extern.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD4A5F01C77007D004ACF0D /* UIImage+Extern.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +97,12 @@
 		EB9E258F1C59A87800D1CADF /* UIFont+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Base.m"; sourceTree = "<group>"; };
 		EB9E25921C59B35E00D1CADF /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
 		EB9E25931C59B35E00D1CADF /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
+		EBD4A5E21C76FDA9004ACF0D /* NSString+Extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extern.h"; sourceTree = "<group>"; };
+		EBD4A5E31C76FDA9004ACF0D /* NSString+Extern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extern.m"; sourceTree = "<group>"; };
+		EBD4A5E71C76FED7004ACF0D /* MediaTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTools.h; sourceTree = "<group>"; };
+		EBD4A5E81C76FED7004ACF0D /* MediaTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTools.m; sourceTree = "<group>"; };
+		EBD4A5EF1C77007D004ACF0D /* UIImage+Extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extern.h"; sourceTree = "<group>"; };
+		EBD4A5F01C77007D004ACF0D /* UIImage+Extern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extern.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,10 +197,14 @@
 		EB9E25601C589E1E00D1CADF /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				EB9E25611C589E1E00D1CADF /* NSData+Encryption.h */,
-				EB9E25621C589E1E00D1CADF /* NSData+Encryption.m */,
 				EB9E25631C589E1E00D1CADF /* UIColor+Extern.h */,
 				EB9E25641C589E1E00D1CADF /* UIColor+Extern.m */,
+				EBD4A5E21C76FDA9004ACF0D /* NSString+Extern.h */,
+				EBD4A5E31C76FDA9004ACF0D /* NSString+Extern.m */,
+				EBD4A5EF1C77007D004ACF0D /* UIImage+Extern.h */,
+				EBD4A5F01C77007D004ACF0D /* UIImage+Extern.m */,
+				EB9E25611C589E1E00D1CADF /* NSData+Encryption.h */,
+				EB9E25621C589E1E00D1CADF /* NSData+Encryption.m */,
 				EB9E25651C589E1E00D1CADF /* UIImage+Effect.h */,
 				EB9E25661C589E1E00D1CADF /* UIImage+Effect.m */,
 				EB3AAEAC1C73236500D52A66 /* UIImage+FitSize.h */,
@@ -204,6 +220,7 @@
 		EB9E25791C589F0D00D1CADF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EBD4A5E61C76FECC004ACF0D /* MediaTools */,
 				EB9E25871C58A04600D1CADF /* Track */,
 				EB9E25801C589F4B00D1CADF /* WebViewBridge */,
 			);
@@ -228,6 +245,15 @@
 			path = Track;
 			sourceTree = "<group>";
 		};
+		EBD4A5E61C76FECC004ACF0D /* MediaTools */ = {
+			isa = PBXGroup;
+			children = (
+				EBD4A5E71C76FED7004ACF0D /* MediaTools.h */,
+				EBD4A5E81C76FED7004ACF0D /* MediaTools.m */,
+			);
+			path = MediaTools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -238,8 +264,11 @@
 				EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */,
 				EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */,
 				EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */,
+				EBD4A5F11C77007D004ACF0D /* UIImage+Extern.h in Headers */,
+				EBD4A5E91C76FED7004ACF0D /* MediaTools.h in Headers */,
 				EB9E25751C589E3000D1CADF /* UIView+Animations.h in Headers */,
 				EB9E25771C589E3000D1CADF /* UIView+Layer.h in Headers */,
+				EBD4A5E41C76FDA9004ACF0D /* NSString+Extern.h in Headers */,
 				EB9E25731C589E3000D1CADF /* UITableView+CalculateCellHeight.h in Headers */,
 				EB9E256B1C589E1E00D1CADF /* UIImage+Effect.h in Headers */,
 				EB9E25901C59A87800D1CADF /* UIFont+Base.h in Headers */,
@@ -354,12 +383,15 @@
 				EB9E25761C589E3000D1CADF /* UIView+Animations.m in Sources */,
 				EB9E25951C59B35E00D1CADF /* NSString+Path.m in Sources */,
 				EB0785751C5626F900966D30 /* UIView+Base.m in Sources */,
+				EBD4A5E51C76FDA9004ACF0D /* NSString+Extern.m in Sources */,
 				EB9E256A1C589E1E00D1CADF /* UIColor+Extern.m in Sources */,
 				EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */,
+				EBD4A5EA1C76FED7004ACF0D /* MediaTools.m in Sources */,
 				EB3AAEC51C740CB800D52A66 /* ZXWCircleProgressView.m in Sources */,
 				EB9E25741C589E3000D1CADF /* UITableView+CalculateCellHeight.m in Sources */,
 				EB9E25911C59A87800D1CADF /* UIFont+Base.m in Sources */,
 				EB9E25681C589E1E00D1CADF /* NSData+Encryption.m in Sources */,
+				EBD4A5F21C77007D004ACF0D /* UIImage+Extern.m in Sources */,
 				EB3AAEAF1C73236500D52A66 /* UIImage+FitSize.m in Sources */,
 				EB9E25781C589E3000D1CADF /* UIView+Layer.m in Sources */,
 				EB3AAEC11C740C8000D52A66 /* ZXWAlertView.m in Sources */,
