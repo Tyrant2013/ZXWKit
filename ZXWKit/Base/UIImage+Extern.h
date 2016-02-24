@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface UIImage (Extern)
+
+- (UIImage *)zxw_imageWithRoundedCornersAndSize:(CGSize)size cornerRaidus:(CGFloat)radius;
 
 @end

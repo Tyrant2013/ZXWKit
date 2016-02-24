@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 
+
 @implementation MediaTools
 
 + (UIImage *)getFirstFrameOfVideoWithVideoURL:(NSURL *)videoURL
@@ -17,20 +18,20 @@
     AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoURL options:nil];
     NSParameterAssert(asset);
     AVAssetImageGenerator *assetIG = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-    
+
     assetIG.appliesPreferredTrackTransform = YES;
     assetIG.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
-    
+
     CGImageRef thumbnailImageRef = NULL;
     CFTimeInterval thumbnailImageTime = 60;
     NSError *igError = nil;
     thumbnailImageRef = [assetIG copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 60) actualTime:NULL error:&igError];
-    
+
     if (!thumbnailImageRef)
-        NSLog(@"thumbnailImageGenerationError %@", igError );
-    
+        NSLog(@"thumbnailImageGenerationError %@", igError);
+
     UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
-    
+
     return thumbnailImage;
 }
 

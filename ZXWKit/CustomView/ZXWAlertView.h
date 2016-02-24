@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface ZXWAlertView : UIView
 
-- (id)initWithTitle:(NSString *)title leftButton:(NSString *)leftButton middleButton:(NSString *)middleButton rightButton:(NSString *)rightButton content:(NSString *)content completeWithButtonIndex:(void(^)(NSUInteger index))complete;
+- (id)initWithTitle:(NSString *)title leftButton:(NSString *)leftButton middleButton:(NSString *)middleButton rightButton:(NSString *)rightButton content:(NSString *)content completeWithButtonIndex:(void (^)(NSUInteger index))complete;
 - (void)show;
 
 @end

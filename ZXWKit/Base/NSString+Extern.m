@@ -8,6 +8,7 @@
 
 #import "NSString+Extern.h"
 
+
 @implementation NSString (Extern)
 
 - (NSString *)transformMandarinToLatin:(NSString *)string

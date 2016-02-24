@@ -10,6 +10,7 @@
 
 @class UIImage;
 
+
 @interface MediaTools : NSObject
 
 + (UIImage *)getFirstFrameOfVideoWithVideoURL:(NSURL *)videoURL;

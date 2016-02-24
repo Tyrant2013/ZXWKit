@@ -9,9 +9,11 @@
 #import "NSStringPathTests.h"
 #import <ZXWKit/NSString+Path.h>
 
+
 @implementation NSStringPathTests
 
-- (void)testBezierPath {
+- (void)testBezierPath
+{
     NSString *str = @"aaaaa";
     UIFont *font = [UIFont systemFontOfSize:20];
     UIBezierPath *bezierPath = [str bezierPathWithFont:font];
