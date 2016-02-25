@@ -11,13 +11,11 @@
 
 @implementation UIColor (Extern)
 
-+ (UIColor *)zxw_colorWithHexString:(NSString *)hexString
-{
++ (UIColor *)zxw_colorWithHexString:(NSString *)hexString {
     return [self zxw_colorWithHexString:hexString alpha:1.0f];
 }
 
-+ (UIColor *)zxw_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha
-{
++ (UIColor *)zxw_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha {
     NSString *cString = [[hexString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
 
     // String should be 6 or 8 characters
@@ -58,8 +56,7 @@
     return [UIColor colorWithRed:((float)r / 255.0f) green:((float)g / 255.0f) blue:((float)b / 255.0f) alpha:alpha];
 }
 
-+ (UIColor *)zxw__colorWithHexString:(NSString *)hexString
-{
++ (UIColor *)zxw__colorWithHexString:(NSString *)hexString {
     if ([[hexString substringToIndex:1] isEqualToString:@"#"]) {
         hexString = [hexString substringFromIndex:1];
     }
@@ -74,8 +71,7 @@
                            alpha:1.0];
 }
 
-- (UIImage *)zxw_imageWithSize:(CGSize)size
-{
+- (UIImage *)zxw_imageWithSize:(CGSize)size {
     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, self.CGColor);
@@ -85,8 +81,7 @@
     return image;
 }
 
-- (UIImage *)zxw_imageWithSize:(CGSize)size cornerRadius:(CGFloat)radius
-{
+- (UIImage *)zxw_imageWithSize:(CGSize)size cornerRadius:(CGFloat)radius {
     CGRect rect = (CGRect){0, 0, size};
     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
     CGContextRef context = UIGraphicsGetCurrentContext();

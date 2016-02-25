@@ -11,56 +11,47 @@
 
 @implementation UIView (Base)
 
-- (void)setX:(CGFloat)x
-{
+- (void)setX:(CGFloat)x {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
 }
 
-- (CGFloat)x
-{
+- (CGFloat)x {
     return CGRectGetMinX(self.frame);
 }
 
-- (void)setY:(CGFloat)y
-{
+- (void)setY:(CGFloat)y {
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
 }
 
-- (CGFloat)y
-{
+- (CGFloat)y {
     return CGRectGetMinY(self.frame);
 }
 
-- (void)setHeight:(CGFloat)height
-{
+- (void)setHeight:(CGFloat)height {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
 }
 
-- (CGFloat)height
-{
+- (CGFloat)height {
     return CGRectGetHeight(self.frame);
 }
 
-- (void)setWidth:(CGFloat)width
-{
+- (void)setWidth:(CGFloat)width {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
 }
 
-- (CGFloat)width
-{
+- (CGFloat)width {
     return CGRectGetWidth(self.frame);
 }
 
-- (void)setBottom:(CGFloat)bottom
-{
+- (void)setBottom:(CGFloat)bottom {
     CGRect frame = self.frame;
     CGFloat height = bottom - CGRectGetMinY(frame);
     if (height >= 0.f) {
@@ -69,33 +60,27 @@
     }
 }
 
-- (CGFloat)bottom
-{
+- (CGFloat)bottom {
     return CGRectGetMaxY(self.frame);
 }
 
-- (void)setTop:(CGFloat)top
-{
+- (void)setTop:(CGFloat)top {
     self.y = top;
 }
 
-- (CGFloat)top
-{
+- (CGFloat)top {
     return self.y;
 }
 
-- (void)setLeft:(CGFloat)left
-{
+- (void)setLeft:(CGFloat)left {
     self.x = left;
 }
 
-- (CGFloat)left
-{
+- (CGFloat)left {
     return self.x;
 }
 
-- (void)setRight:(CGFloat)right
-{
+- (void)setRight:(CGFloat)right {
     CGRect frame = self.frame;
     CGFloat width = right - frame.origin.x;
     if (width >= 0.f) {
@@ -104,8 +89,7 @@
     }
 }
 
-- (CGFloat)right
-{
+- (CGFloat)right {
     return CGRectGetMaxX(self.frame);
 }
 

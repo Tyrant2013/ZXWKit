@@ -11,8 +11,7 @@
 
 @implementation UIImage (FitSize)
 
-- (UIImage *)zxw_fitSize:(CGSize)size
-{
+- (UIImage *)zxw_fitSize:(CGSize)size {
     if (self.size.width != size.width || self.size.height != size.height) {
         UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
         CGRect imageRect = (CGRect){0, 0, size};

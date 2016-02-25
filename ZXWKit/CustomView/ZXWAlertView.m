@@ -35,8 +35,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
 
 @implementation ZXWAlertView
 
-- (id)initWithTitle:(NSString *)title leftButton:(NSString *)leftButton middleButton:(NSString *)middleButton rightButton:(NSString *)rightButton content:(NSString *)content completeWithButtonIndex:(void (^)(NSUInteger))complete
-{
+- (id)initWithTitle:(NSString *)title leftButton:(NSString *)leftButton middleButton:(NSString *)middleButton rightButton:(NSString *)rightButton content:(NSString *)content completeWithButtonIndex:(void (^)(NSUInteger))complete {
     if (self = [super init]) {
         self.complete = complete;
         self.title = title;
@@ -51,8 +50,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
     return self;
 }
 
-- (void)setupSubviews
-{
+- (void)setupSubviews {
     [self setupTitleLabel];
     [self setupContentLabel];
     [self setupLeftButton];
@@ -60,8 +58,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
     [self setupRightButton];
 }
 
-- (void)setupTitleLabel
-{
+- (void)setupTitleLabel {
     if (self.title) {
         UILabel *label = [[UILabel alloc] init];
         label.text = self.title;
@@ -79,8 +76,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
     }
 }
 
-- (void)setupContentLabel
-{
+- (void)setupContentLabel {
     UILabel *label = [[UILabel alloc] init];
     label.text = self.content;
     label.lineBreakMode = NSLineBreakByCharWrapping;
@@ -98,8 +94,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
     [self addConstraints:v];
 }
 
-- (void)setupLeftButton
-{
+- (void)setupLeftButton {
     if (self.leftButtonTitle) {
         UIButton *button = [self buttonWithTitle:self.leftButtonTitle];
         button.tag = kButtonLeftIndex;
@@ -117,8 +112,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
     }
 }
 
-- (void)setupMiddleButton
-{
+- (void)setupMiddleButton {
     if (self.middleButtonTitle) {
         UIButton *button = [self buttonWithTitle:self.middleButtonTitle];
         button.tag = kButtonMiddleIndex;
@@ -135,8 +129,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
     }
 }
 
-- (void)setupRightButton
-{
+- (void)setupRightButton {
     if (self.rightButtonTitle) {
         UIButton *button = [self buttonWithTitle:self.rightButtonTitle];
         button.tag = kButtonRightIndex;
@@ -154,8 +147,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
     }
 }
 
-- (UIButton *)buttonWithTitle:(NSString *)title
-{
+- (UIButton *)buttonWithTitle:(NSString *)title {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.backgroundColor = [UIColor whiteColor];
     button.titleLabel.font = [UIFont systemFontOfSize:kButtonTitleSize];
@@ -166,8 +158,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
     return button;
 }
 
-- (void)show
-{
+- (void)show {
     _showWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _showWindow.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
     _showWindow.windowLevel = UIWindowLevelAlert;
@@ -188,8 +179,7 @@ static CGFloat const kAlertViewMargin = 50.0f;
     [self setupLayoutConstrait];
 }
 
-- (void)setupLayoutConstrait
-{
+- (void)setupLayoutConstrait {
     NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
     NSLayoutConstraint *lead = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeLeading multiplier:1 constant:kAlertViewMargin];
     NSLayoutConstraint *trail = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeTrailing multiplier:1 constant:-kAlertViewMargin];
@@ -198,15 +188,13 @@ static CGFloat const kAlertViewMargin = 50.0f;
     [self.showWindow addConstraints:@[ centerY, lead, trail ]];
 }
 
-- (void)tapGesture:(UITapGestureRecognizer *)sender
-{
+- (void)tapGesture:(UITapGestureRecognizer *)sender {
     [self removeFromSuperview];
     self.showWindow.hidden = YES;
     self.showWindow = nil;
 }
 
-- (void)buttonClick:(UIButton *)sender
-{
+- (void)buttonClick:(UIButton *)sender {
     [self removeFromSuperview];
     self.showWindow.hidden = YES;
     self.showWindow = nil;

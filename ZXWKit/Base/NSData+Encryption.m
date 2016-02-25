@@ -14,8 +14,7 @@ static NSString *const gIv = @"5PLOEQ87Z5LM9K2U";
 
 @implementation NSData (Encryption)
 
-- (NSData *)zxw_AES128EncryptedWithKey:(NSString *)key
-{
+- (NSData *)zxw_AES128EncryptedWithKey:(NSString *)key {
     char keyPtr[kCCKeySizeAES128 + 1];
     bzero(keyPtr, sizeof(keyPtr));
     [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
@@ -44,8 +43,7 @@ static NSString *const gIv = @"5PLOEQ87Z5LM9K2U";
     return nil;
 }
 
-- (NSData *)zxw_AES128DecryptedWithKey:(NSString *)key
-{
+- (NSData *)zxw_AES128DecryptedWithKey:(NSString *)key {
     char keyPtr[kCCKeySizeAES128 + 1];
     bzero(keyPtr, sizeof(keyPtr));
     [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];

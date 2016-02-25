@@ -12,8 +12,7 @@
 
 @implementation UIImage (Extern)
 
-- (void)decodeWithFilePath:(NSString *)filePath
-{
+- (void)decodeWithFilePath:(NSString *)filePath {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData *data = [NSData dataWithContentsOfFile:filePath];
 
@@ -21,8 +20,7 @@
     });
 }
 
-- (void)decodeWithData:(NSData *)data
-{
+- (void)decodeWithData:(NSData *)data {
     CGImageSourceRef src = CGImageSourceCreateWithData((CFDataRef)data, NULL);
     if (src) {
         // 获取Gif的帧数
@@ -61,8 +59,7 @@
     }
 }
 
-- (UIImage *)zxw_imageWithRoundedCornersAndSize:(CGSize)size cornerRaidus:(CGFloat)radius
-{
+- (UIImage *)zxw_imageWithRoundedCornersAndSize:(CGSize)size cornerRaidus:(CGFloat)radius {
     CGRect rect = (CGRect){0.f, 0.f, size};
 
     UIGraphicsBeginImageContextWithOptions(size, NO, UIScreen.mainScreen.scale);

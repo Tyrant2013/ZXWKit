@@ -12,8 +12,7 @@
 
 @implementation UIControl (Track)
 
-+ (void)load
-{
++ (void)load {
 #ifdef DEBUG
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -22,8 +21,7 @@
 #endif
 }
 
-+ (void)changeMethod
-{
++ (void)changeMethod {
     Class class = [self class];
     SEL originalSelector = @selector(sendAction:to:forEvent:);
     SEL swizzledSelector = @selector(zxw_sendAction:to:forEvent:);
@@ -34,8 +32,7 @@
     method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
-- (void)zxw_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event
-{
+- (void)zxw_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     [self zxw_sendAction:action to:target forEvent:event];
 }
 

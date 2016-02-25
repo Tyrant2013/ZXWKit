@@ -11,8 +11,7 @@
 
 @implementation UIView (Layer)
 
-- (void)zxw_cornerRadius:(CGFloat)radius borderColor:(UIColor *)color
-{
+- (void)zxw_cornerRadius:(CGFloat)radius borderColor:(UIColor *)color {
     self.layer.cornerRadius = radius;
     self.layer.borderColor = color.CGColor;
     self.layer.borderWidth = 1.0f;

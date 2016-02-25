@@ -11,8 +11,7 @@
 
 @implementation NSString (Extern)
 
-- (NSString *)transformMandarinToLatin:(NSString *)string
-{
+- (NSString *)transformMandarinToLatin:(NSString *)string {
     NSMutableString *preString = [string mutableCopy];
     /*转换成成带音 调的拼音*/
     CFStringTransform((CFMutableStringRef)preString, NULL, kCFStringTransformMandarinLatin, NO);

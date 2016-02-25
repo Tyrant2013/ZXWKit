@@ -11,16 +11,14 @@
 
 @implementation UIFont (Base)
 
-+ (UIFont *)zxw_fontFromCTFont:(CTFontRef)ctFont
-{
++ (UIFont *)zxw_fontFromCTFont:(CTFontRef)ctFont {
     CGFloat pointSize = CTFontGetSize(ctFont);
     NSString *fontPostScriptName = (NSString *)CFBridgingRelease(CTFontCopyPostScriptName(ctFont));
     UIFont *fontFromCTFont = [UIFont fontWithName:fontPostScriptName size:pointSize];
     return fontFromCTFont;
 }
 
-- (CTFontRef)zxw_ctFont
-{
+- (CTFontRef)zxw_ctFont {
     CTFontRef ctfont = CTFontCreateWithName((__bridge CFStringRef)self.fontName,
                                             self.pointSize,
                                             NULL);

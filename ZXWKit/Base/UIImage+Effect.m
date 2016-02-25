@@ -13,29 +13,25 @@
 
 @implementation UIImage (Effect)
 
-- (UIImage *)zxw_applyLightEffect
-{
+- (UIImage *)zxw_applyLightEffect {
     UIColor *tintColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     return [self zxw_applyBlurWithRadius:30 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
 
 
-- (UIImage *)zxw_applyExtraLightEffect
-{
+- (UIImage *)zxw_applyExtraLightEffect {
     UIColor *tintColor = [UIColor colorWithWhite:0.97 alpha:0.82];
     return [self zxw_applyBlurWithRadius:20 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
 
 
-- (UIImage *)zxw_applyDarkEffect
-{
+- (UIImage *)zxw_applyDarkEffect {
     UIColor *tintColor = [UIColor colorWithWhite:0.11 alpha:0.73];
     return [self zxw_applyBlurWithRadius:20 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
 
 
-- (UIImage *)zxw_applyTintEffectWithColor:(UIColor *)tintColor
-{
+- (UIImage *)zxw_applyTintEffectWithColor:(UIColor *)tintColor {
     const CGFloat EffectColorAlpha = 0.6;
     UIColor *effectColor = tintColor;
     size_t componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);
@@ -57,8 +53,7 @@
 - (UIImage *)zxw_applyBlurWithRadius:(CGFloat)blurRadius
                            tintColor:(UIColor *)tintColor
                saturationDeltaFactor:(CGFloat)saturationDeltaFactor
-                           maskImage:(UIImage *)maskImage
-{
+                           maskImage:(UIImage *)maskImage {
     // Check pre-conditions.
     if (self.size.width < 1 || self.size.height < 1) {
         NSLog(@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
@@ -186,8 +181,7 @@
     return outputImage;
 }
 
-- (UIImage *)zxw_boxblurImageWithBlur:(CGFloat)blur
-{
+- (UIImage *)zxw_boxblurImageWithBlur:(CGFloat)blur {
     if (blur < 0.f || blur > 1.f) {
         blur = 0.5f;
     }

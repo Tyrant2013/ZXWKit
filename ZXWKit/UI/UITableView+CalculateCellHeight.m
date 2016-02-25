@@ -12,8 +12,7 @@
 
 @implementation UITableView (CalculateCellHeight)
 
-- (CGFloat)zxw_heightForIdentifier:(NSString *)identifier cacheKey:(NSString *)cahceKey configuration:(void (^)(id cell))configuration
-{
+- (CGFloat)zxw_heightForIdentifier:(NSString *)identifier cacheKey:(NSString *)cahceKey configuration:(void (^)(id cell))configuration {
     if (identifier == nil) {
         return 0.0f;
     }
@@ -42,8 +41,7 @@
     return height;
 }
 
-- (NSMutableDictionary *)cacheHeight
-{
+- (NSMutableDictionary *)cacheHeight {
     NSMutableDictionary *data = objc_getAssociatedObject(self, _cmd);
     if (data == nil) {
         data = @{}.mutableCopy;

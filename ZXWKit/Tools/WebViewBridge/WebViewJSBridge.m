@@ -32,13 +32,11 @@ static NSString *const kEmpty = @"";
 
 @implementation WebViewJSBridge
 
-+ (instancetype)bridgeForWebView:(UIWebView *)webView webViewDelegate:(NSObject<UIWebViewDelegate> *)webViewDelegate
-{
++ (instancetype)bridgeForWebView:(UIWebView *)webView webViewDelegate:(NSObject<UIWebViewDelegate> *)webViewDelegate {
     return [self bridgeForWebView:webView webViewDelegate:webViewDelegate resourceBundle:nil];
 }
 
-+ (instancetype)bridgeForWebView:(UIWebView *)webView webViewDelegate:(NSObject<UIWebViewDelegate> *)webViewDelegate resourceBundle:(NSBundle *)bundle
-{
++ (instancetype)bridgeForWebView:(UIWebView *)webView webViewDelegate:(NSObject<UIWebViewDelegate> *)webViewDelegate resourceBundle:(NSBundle *)bundle {
     WebViewJSBridge *bridge = [[[self class] alloc] init];
     [bridge _platformSpecificSetup:webView webViewDelegate:webViewDelegate resourceBundle:bundle];
     return bridge;
@@ -47,8 +45,7 @@ static NSString *const kEmpty = @"";
 #pragma mark -
 #pragma mark - UIWebViewDelegate
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (webView != _webView) {
         return;
     }
@@ -90,8 +87,7 @@ static NSString *const kEmpty = @"";
     }
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     if (webView != _webView) {
         return;
     }
@@ -102,8 +98,7 @@ static NSString *const kEmpty = @"";
     }
 }
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     if (webView != _webView) {
         return YES;
     }
@@ -132,8 +127,7 @@ static NSString *const kEmpty = @"";
     }
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
+- (void)webViewDidStartLoad:(UIWebView *)webView {
     if (webView != _webView) {
         return;
     }
@@ -144,8 +138,7 @@ static NSString *const kEmpty = @"";
     }
 }
 
-- (NSArray *)p_covertToNSArrayFromJSArray:(NSString *)argsString
-{
+- (NSArray *)p_covertToNSArrayFromJSArray:(NSString *)argsString {
     NSData *argsData = [argsString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
     NSDictionary *argsDic = [NSJSONSerialization JSONObjectWithData:argsData options:NSJSONReadingAllowFragments error:&error];
@@ -164,8 +157,7 @@ static NSString *const kEmpty = @"";
 #pragma mark -
 #pragma mark - Excute JavaScript Method
 
-- (void)excuteJSWithObj:(NSString *)obj function:(NSString *)function
-{
+- (void)excuteJSWithObj:(NSString *)obj function:(NSString *)function {
     NSString *js = function;
     if (obj) {
         js = [NSString stringWithFormat:@"%@.%@", obj, function];
@@ -178,16 +170,14 @@ static NSString *const kEmpty = @"";
 
 - (void)_platformSpecificSetup:(UIWebView *)webView
                webViewDelegate:(id<UIWebViewDelegate>)webViewDelegate
-                resourceBundle:(NSBundle *)bundle
-{
+                resourceBundle:(NSBundle *)bundle {
     _webView = webView;
     _webViewDelegate = webViewDelegate;
     _webView.delegate = self;
     _resourceBundle = bundle;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     _webView.delegate = nil;
     _webView = nil;
     _webViewDelegate = nil;

@@ -11,8 +11,7 @@
 
 @implementation UIView (Animations)
 
-- (void)zxw_beginHeartAnimation
-{
+- (void)zxw_beginHeartAnimation {
     UIViewAnimationOptions op = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowAnimatedContent | UIViewAnimationOptionBeginFromCurrentState;
     [UIView animateWithDuration:0.15f delay:0 options:op animations:^{
         [self.layer setValue:@(0.80) forKeyPath:@"transform.scale"];
@@ -27,8 +26,7 @@
     }];
 }
 
-- (void)zxw_beginTransitionAnimation
-{
+- (void)zxw_beginTransitionAnimation {
     CATransition *transition = [CATransition animation];
     transition.duration = 0.75f;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];

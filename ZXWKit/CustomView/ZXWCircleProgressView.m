@@ -24,8 +24,7 @@ static CGFloat const kAnimationDuration = 0.25f;
             circleBackgroundColor = _circleBackgroundColor,
             circleStrokeWidth = _circleStrokeWidth;
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         //        [self p_setup];
         //        [self p_setupAnimation];
@@ -34,16 +33,14 @@ static CGFloat const kAnimationDuration = 0.25f;
     return self;
 }
 
-- (void)drawRect:(CGRect)rect
-{
+- (void)drawRect:(CGRect)rect {
     NSLog(@"%@", NSStringFromSelector(_cmd));
     self.layer.backgroundColor = [UIColor whiteColor].CGColor;
     [self p_setup];
     [self p_setupAnimation];
 }
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     NSLog(@"%@", NSStringFromSelector(_cmd));
     [super layoutSubviews];
     self.shapeLayer.strokeColor = self.circleStrokeColor.CGColor;
@@ -52,8 +49,7 @@ static CGFloat const kAnimationDuration = 0.25f;
     self.shapeLayer.timeOffset = self.progress * kAnimationDuration;
 }
 
-- (void)p_setup
-{
+- (void)p_setup {
     if (_shapeLayer != nil) {
         return;
     }
@@ -66,8 +62,7 @@ static CGFloat const kAnimationDuration = 0.25f;
     [self.layer addSublayer:_shapeLayer];
 }
 
-- (void)p_setupAnimation
-{
+- (void)p_setupAnimation {
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation.duration = kAnimationDuration;
     animation.fromValue = @0.0f;
@@ -78,50 +73,43 @@ static CGFloat const kAnimationDuration = 0.25f;
     _shapeLayer.speed = 0.0f;
 }
 
-- (void)setProgress:(CGFloat)progress
-{
+- (void)setProgress:(CGFloat)progress {
     CGFloat value = MIN(MAX(0.0, progress), 1);
     self.shapeLayer.timeOffset = kAnimationDuration * value;
 }
 
-- (UIColor *)circleBackgroundColor
-{
+- (UIColor *)circleBackgroundColor {
     if (_circleBackgroundColor == nil) {
         _circleBackgroundColor = [UIColor whiteColor];
     }
     return _circleBackgroundColor;
 }
 
-- (void)setCircleBackgroundColor:(UIColor *)circleBackgroundColor
-{
+- (void)setCircleBackgroundColor:(UIColor *)circleBackgroundColor {
     _circleBackgroundColor = circleBackgroundColor;
     self.shapeLayer.fillColor = circleBackgroundColor.CGColor;
 }
 
-- (UIColor *)circleStrokeColor
-{
+- (UIColor *)circleStrokeColor {
     if (_circleStrokeColor == nil) {
         _circleStrokeColor = [UIColor orangeColor];
     }
     return _circleStrokeColor;
 }
 
-- (void)setCircleStrokeColor:(UIColor *)circleStrokeColor
-{
+- (void)setCircleStrokeColor:(UIColor *)circleStrokeColor {
     _circleStrokeColor = circleStrokeColor;
     self.shapeLayer.strokeColor = circleStrokeColor.CGColor;
 }
 
-- (CGFloat)circleStrokeWidth
-{
+- (CGFloat)circleStrokeWidth {
     if (_circleStrokeWidth == 0.0f) {
         _circleStrokeWidth = 1.0f;
     }
     return _circleStrokeWidth;
 }
 
-- (void)setCircleStrokeWidth:(CGFloat)circleStrokeWidth
-{
+- (void)setCircleStrokeWidth:(CGFloat)circleStrokeWidth {
     _circleStrokeWidth = circleStrokeWidth;
     self.shapeLayer.lineWidth = circleStrokeWidth;
 }

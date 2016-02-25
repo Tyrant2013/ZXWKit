@@ -12,8 +12,7 @@
 
 @implementation NSStringPathTests
 
-- (void)testBezierPath
-{
+- (void)testBezierPath {
     NSString *str = @"aaaaa";
     UIFont *font = [UIFont systemFontOfSize:20];
     UIBezierPath *bezierPath = [str bezierPathWithFont:font];

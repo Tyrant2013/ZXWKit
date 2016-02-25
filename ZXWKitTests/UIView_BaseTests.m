@@ -12,16 +12,13 @@
 
 @implementation UIView_BaseTest
 
-- (void)setUp
-{
+- (void)setUp {
 }
 
-- (void)tearDown
-{
+- (void)tearDown {
 }
 
-- (void)testX
-{
+- (void)testX {
     UIView *view = [[UIView alloc] initWithFrame:(CGRect){10, 0, 0, 0}];
     NSAssert(view.x == 10, @"must equal to 10");
     view = [[UIView alloc] init];

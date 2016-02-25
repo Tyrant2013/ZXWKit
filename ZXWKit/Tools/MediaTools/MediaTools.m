@@ -13,8 +13,7 @@
 
 @implementation MediaTools
 
-+ (UIImage *)getFirstFrameOfVideoWithVideoURL:(NSURL *)videoURL
-{
++ (UIImage *)getFirstFrameOfVideoWithVideoURL:(NSURL *)videoURL {
     AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoURL options:nil];
     NSParameterAssert(asset);
     AVAssetImageGenerator *assetIG = [[AVAssetImageGenerator alloc] initWithAsset:asset];

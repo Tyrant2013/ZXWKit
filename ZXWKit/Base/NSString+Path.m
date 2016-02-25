@@ -13,8 +13,7 @@
 
 @implementation NSString (Path)
 
-- (UIBezierPath *)bezierPathWithFont:(UIFont *)font
-{
+- (UIBezierPath *)bezierPathWithFont:(UIFont *)font {
     CGMutablePathRef letters = CGPathCreateMutable();
 
     CTFontRef ctFont = CTFontCreateWithName((__bridge CFStringRef)font.fontName,
