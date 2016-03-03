@@ -19,6 +19,9 @@
 		EB3AAEC11C740C8000D52A66 /* ZXWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3AAEBF1C740C8000D52A66 /* ZXWAlertView.m */; };
 		EB3AAEC41C740CB800D52A66 /* ZXWCircleProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = EB3AAEC21C740CB800D52A66 /* ZXWCircleProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB3AAEC51C740CB800D52A66 /* ZXWCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3AAEC31C740CB800D52A66 /* ZXWCircleProgressView.m */; };
+		EB6BFB691C867F79005DD8C8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BFB681C867F79005DD8C8 /* AssetsLibrary.framework */; };
+		EB6F71FC1C7E9B82009AFB94 /* NSArray+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6F71FA1C7E9B82009AFB94 /* NSArray+Extern.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB6F71FD1C7E9B82009AFB94 /* NSArray+Extern.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6F71FB1C7E9B82009AFB94 /* NSArray+Extern.m */; };
 		EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25611C589E1E00D1CADF /* NSData+Encryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E25681C589E1E00D1CADF /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25621C589E1E00D1CADF /* NSData+Encryption.m */; };
 		EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25631C589E1E00D1CADF /* UIColor+Extern.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,12 +43,18 @@
 		EB9E25911C59A87800D1CADF /* UIFont+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E258F1C59A87800D1CADF /* UIFont+Base.m */; };
 		EB9E25941C59B35E00D1CADF /* NSString+Path.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9E25921C59B35E00D1CADF /* NSString+Path.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9E25951C59B35E00D1CADF /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9E25931C59B35E00D1CADF /* NSString+Path.m */; };
-		EBD4A5E41C76FDA9004ACF0D /* NSString+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD4A5E21C76FDA9004ACF0D /* NSString+Extern.h */; };
+		EBD4A5E41C76FDA9004ACF0D /* NSString+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD4A5E21C76FDA9004ACF0D /* NSString+Extern.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBD4A5E51C76FDA9004ACF0D /* NSString+Extern.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD4A5E31C76FDA9004ACF0D /* NSString+Extern.m */; };
-		EBD4A5E91C76FED7004ACF0D /* MediaTools.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD4A5E71C76FED7004ACF0D /* MediaTools.h */; };
+		EBD4A5E91C76FED7004ACF0D /* MediaTools.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD4A5E71C76FED7004ACF0D /* MediaTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBD4A5EA1C76FED7004ACF0D /* MediaTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD4A5E81C76FED7004ACF0D /* MediaTools.m */; };
-		EBD4A5F11C77007D004ACF0D /* UIImage+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD4A5EF1C77007D004ACF0D /* UIImage+Extern.h */; };
+		EBD4A5F11C77007D004ACF0D /* UIImage+Extern.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD4A5EF1C77007D004ACF0D /* UIImage+Extern.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBD4A5F21C77007D004ACF0D /* UIImage+Extern.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD4A5F01C77007D004ACF0D /* UIImage+Extern.m */; };
+		EBE667791C8834D500DEC9A5 /* ZXWScanFrameView.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE667771C8834D500DEC9A5 /* ZXWScanFrameView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBE6677A1C8834D500DEC9A5 /* ZXWScanFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE667781C8834D500DEC9A5 /* ZXWScanFrameView.m */; };
+		EBE667821C883E8400DEC9A5 /* ZXWScanView.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE667801C883E8400DEC9A5 /* ZXWScanView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBE667831C883E8400DEC9A5 /* ZXWScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE667811C883E8400DEC9A5 /* ZXWScanView.m */; };
+		EBE667871C88406900DEC9A5 /* ZXWPlaceHolderTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE667851C88406900DEC9A5 /* ZXWPlaceHolderTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBE667881C88406900DEC9A5 /* ZXWPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE667861C88406900DEC9A5 /* ZXWPlaceHolderTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +84,9 @@
 		EB3AAEBF1C740C8000D52A66 /* ZXWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXWAlertView.m; sourceTree = "<group>"; };
 		EB3AAEC21C740CB800D52A66 /* ZXWCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXWCircleProgressView.h; sourceTree = "<group>"; };
 		EB3AAEC31C740CB800D52A66 /* ZXWCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXWCircleProgressView.m; sourceTree = "<group>"; };
+		EB6BFB681C867F79005DD8C8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		EB6F71FA1C7E9B82009AFB94 /* NSArray+Extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extern.h"; sourceTree = "<group>"; };
+		EB6F71FB1C7E9B82009AFB94 /* NSArray+Extern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extern.m"; sourceTree = "<group>"; };
 		EB9E25611C589E1E00D1CADF /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
 		EB9E25621C589E1E00D1CADF /* NSData+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
 		EB9E25631C589E1E00D1CADF /* UIColor+Extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extern.h"; sourceTree = "<group>"; };
@@ -103,6 +115,12 @@
 		EBD4A5E81C76FED7004ACF0D /* MediaTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTools.m; sourceTree = "<group>"; };
 		EBD4A5EF1C77007D004ACF0D /* UIImage+Extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extern.h"; sourceTree = "<group>"; };
 		EBD4A5F01C77007D004ACF0D /* UIImage+Extern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extern.m"; sourceTree = "<group>"; };
+		EBE667771C8834D500DEC9A5 /* ZXWScanFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXWScanFrameView.h; sourceTree = "<group>"; };
+		EBE667781C8834D500DEC9A5 /* ZXWScanFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXWScanFrameView.m; sourceTree = "<group>"; };
+		EBE667801C883E8400DEC9A5 /* ZXWScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXWScanView.h; sourceTree = "<group>"; };
+		EBE667811C883E8400DEC9A5 /* ZXWScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXWScanView.m; sourceTree = "<group>"; };
+		EBE667851C88406900DEC9A5 /* ZXWPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXWPlaceHolderTextView.h; sourceTree = "<group>"; };
+		EBE667861C88406900DEC9A5 /* ZXWPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXWPlaceHolderTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6BFB691C867F79005DD8C8 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +146,7 @@
 		EB07854D1C561E5500966D30 = {
 			isa = PBXGroup;
 			children = (
+				EB6BFB681C867F79005DD8C8 /* AssetsLibrary.framework */,
 				EB0785591C561E5500966D30 /* ZXWKit */,
 				EB0785651C561E5500966D30 /* ZXWKitTests */,
 				EB0785581C561E5500966D30 /* Products */,
@@ -186,6 +206,8 @@
 		EB07EA2D1C71786300510837 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				EBE667841C88406900DEC9A5 /* ZXWPlaceHolderTextView */,
+				EBE667761C8834C200DEC9A5 /* ZXWQRScanView */,
 				EB3AAEC21C740CB800D52A66 /* ZXWCircleProgressView.h */,
 				EB3AAEC31C740CB800D52A66 /* ZXWCircleProgressView.m */,
 				EB3AAEBE1C740C8000D52A66 /* ZXWAlertView.h */,
@@ -203,6 +225,8 @@
 				EBD4A5E31C76FDA9004ACF0D /* NSString+Extern.m */,
 				EBD4A5EF1C77007D004ACF0D /* UIImage+Extern.h */,
 				EBD4A5F01C77007D004ACF0D /* UIImage+Extern.m */,
+				EB6F71FA1C7E9B82009AFB94 /* NSArray+Extern.h */,
+				EB6F71FB1C7E9B82009AFB94 /* NSArray+Extern.m */,
 				EB9E25611C589E1E00D1CADF /* NSData+Encryption.h */,
 				EB9E25621C589E1E00D1CADF /* NSData+Encryption.m */,
 				EB9E25651C589E1E00D1CADF /* UIImage+Effect.h */,
@@ -254,6 +278,26 @@
 			path = MediaTools;
 			sourceTree = "<group>";
 		};
+		EBE667761C8834C200DEC9A5 /* ZXWQRScanView */ = {
+			isa = PBXGroup;
+			children = (
+				EBE667771C8834D500DEC9A5 /* ZXWScanFrameView.h */,
+				EBE667781C8834D500DEC9A5 /* ZXWScanFrameView.m */,
+				EBE667801C883E8400DEC9A5 /* ZXWScanView.h */,
+				EBE667811C883E8400DEC9A5 /* ZXWScanView.m */,
+			);
+			path = ZXWQRScanView;
+			sourceTree = "<group>";
+		};
+		EBE667841C88406900DEC9A5 /* ZXWPlaceHolderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				EBE667851C88406900DEC9A5 /* ZXWPlaceHolderTextView.h */,
+				EBE667861C88406900DEC9A5 /* ZXWPlaceHolderTextView.m */,
+			);
+			path = ZXWPlaceHolderTextView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -264,14 +308,18 @@
 				EB9E25841C589F4B00D1CADF /* WebViewJSBridge.h in Headers */,
 				EB9E25691C589E1E00D1CADF /* UIColor+Extern.h in Headers */,
 				EB9E25671C589E1E00D1CADF /* NSData+Encryption.h in Headers */,
-				EBD4A5F11C77007D004ACF0D /* UIImage+Extern.h in Headers */,
-				EBD4A5E91C76FED7004ACF0D /* MediaTools.h in Headers */,
 				EB9E25751C589E3000D1CADF /* UIView+Animations.h in Headers */,
 				EB9E25771C589E3000D1CADF /* UIView+Layer.h in Headers */,
-				EBD4A5E41C76FDA9004ACF0D /* NSString+Extern.h in Headers */,
 				EB9E25731C589E3000D1CADF /* UITableView+CalculateCellHeight.h in Headers */,
 				EB9E256B1C589E1E00D1CADF /* UIImage+Effect.h in Headers */,
 				EB9E25901C59A87800D1CADF /* UIFont+Base.h in Headers */,
+				EBD4A5F11C77007D004ACF0D /* UIImage+Extern.h in Headers */,
+				EBD4A5E91C76FED7004ACF0D /* MediaTools.h in Headers */,
+				EBD4A5E41C76FDA9004ACF0D /* NSString+Extern.h in Headers */,
+				EBE667821C883E8400DEC9A5 /* ZXWScanView.h in Headers */,
+				EBE667871C88406900DEC9A5 /* ZXWPlaceHolderTextView.h in Headers */,
+				EBE667791C8834D500DEC9A5 /* ZXWScanFrameView.h in Headers */,
+				EB6F71FC1C7E9B82009AFB94 /* NSArray+Extern.h in Headers */,
 				EB9E25941C59B35E00D1CADF /* NSString+Path.h in Headers */,
 				EB0785741C5626F900966D30 /* UIView+Base.h in Headers */,
 				EB3AAEC01C740C8000D52A66 /* ZXWAlertView.h in Headers */,
@@ -379,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB9E25891C58A05C00D1CADF /* UIControl+Track.m in Sources */,
+				EBE667881C88406900DEC9A5 /* ZXWPlaceHolderTextView.m in Sources */,
 				EB9E256C1C589E1E00D1CADF /* UIImage+Effect.m in Sources */,
 				EB9E25761C589E3000D1CADF /* UIView+Animations.m in Sources */,
 				EB9E25951C59B35E00D1CADF /* NSString+Path.m in Sources */,
@@ -387,8 +436,11 @@
 				EB9E256A1C589E1E00D1CADF /* UIColor+Extern.m in Sources */,
 				EB9E25861C589F4B00D1CADF /* WebViewJSBridge.m in Sources */,
 				EBD4A5EA1C76FED7004ACF0D /* MediaTools.m in Sources */,
+				EBE6677A1C8834D500DEC9A5 /* ZXWScanFrameView.m in Sources */,
 				EB3AAEC51C740CB800D52A66 /* ZXWCircleProgressView.m in Sources */,
+				EB6F71FD1C7E9B82009AFB94 /* NSArray+Extern.m in Sources */,
 				EB9E25741C589E3000D1CADF /* UITableView+CalculateCellHeight.m in Sources */,
+				EBE667831C883E8400DEC9A5 /* ZXWScanView.m in Sources */,
 				EB9E25911C59A87800D1CADF /* UIFont+Base.m in Sources */,
 				EB9E25681C589E1E00D1CADF /* NSData+Encryption.m in Sources */,
 				EBD4A5F21C77007D004ACF0D /* UIImage+Extern.m in Sources */,
