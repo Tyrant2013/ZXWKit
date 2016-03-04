@@ -11,6 +11,7 @@
 @class UIBezierPath;
 @class UIFont;
 
+
 @interface NSString (Path)
 
 - (UIBezierPath *)bezierPathWithFont:(UIFont *)font;

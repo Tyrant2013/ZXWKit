@@ -9,15 +9,16 @@
 #import "NSData+Encryption.h"
 #import <CommonCrypto/CommonCrypto.h>
 
-static NSString * const gIv = @"5PLOEQ87Z5LM9K2U";
+static NSString *const gIv = @"5PLOEQ87Z5LM9K2U";
+
 
 @implementation NSData (Encryption)
 
 - (NSData *)zxw_AES128EncryptedWithKey:(NSString *)key {
-    char keyPtr[kCCKeySizeAES128+1];
+    char keyPtr[kCCKeySizeAES128 + 1];
     bzero(keyPtr, sizeof(keyPtr));
     [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    char ivPtr[kCCKeySizeAES128+1];
+    char ivPtr[kCCKeySizeAES128 + 1];
     memset(ivPtr, 0, sizeof(ivPtr));
     [gIv getCString:ivPtr maxLength:sizeof(ivPtr) encoding:NSUTF8StringEncoding];
     NSUInteger dataLength = [self length];
@@ -43,14 +44,14 @@ static NSString * const gIv = @"5PLOEQ87Z5LM9K2U";
 }
 
 - (NSData *)zxw_AES128DecryptedWithKey:(NSString *)key {
-    char keyPtr[kCCKeySizeAES128+1];
+    char keyPtr[kCCKeySizeAES128 + 1];
     bzero(keyPtr, sizeof(keyPtr));
     [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    
-    char ivPtr[kCCKeySizeAES128+1];
+
+    char ivPtr[kCCKeySizeAES128 + 1];
     memset(ivPtr, 0, sizeof(ivPtr));
     [gIv getCString:ivPtr maxLength:sizeof(ivPtr) encoding:NSUTF8StringEncoding];
-    
+
     NSUInteger dataLength = [self length];
     size_t bufferSize = dataLength + kCCBlockSizeAES128;
     void *buffer = malloc(bufferSize);

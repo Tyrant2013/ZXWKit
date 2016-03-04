@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface ZXWCircleProgressView : UIView
 
-@property (nonatomic, assign) CGFloat                           progress;
-@property (nonatomic, assign) CGFloat                           circleStrokeWidth;
-@property (nonatomic, strong) UIColor                           *circleStrokeColor;
-@property (nonatomic, strong) UIColor                           *circleBackgroundColor;
+@property (nonatomic, assign) CGFloat progress;
+@property (nonatomic, assign) CGFloat circleStrokeWidth;
+@property (nonatomic, strong) UIColor *circleStrokeColor;
+@property (nonatomic, strong) UIColor *circleBackgroundColor;
 
 @end

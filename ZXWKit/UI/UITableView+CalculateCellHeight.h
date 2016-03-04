@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface UITableView (CalculateCellHeight)
 
-- (CGFloat)zxw_heightForIdentifier:(NSString *)identifier cacheKey:(NSString *)cahceKey configuration:(void(^)(id cell))configuration;
+- (CGFloat)zxw_heightForIdentifier:(NSString *)identifier cacheKey:(NSString *)cahceKey configuration:(void (^)(id cell))configuration;
 
 @end

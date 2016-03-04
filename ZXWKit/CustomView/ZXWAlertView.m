@@ -8,28 +8,30 @@
 
 #import "ZXWAlertView.h"
 
-static NSUInteger const kButtonLeftIndex                        = 1;
-static NSUInteger const kButtonMiddleIndex                      = 2;
-static NSUInteger const kButtonRightIndex                       = 3;
-static CGFloat const    kButtonHeight                           = 50.0f;
-static CGFloat const    kButtonWidthMultiplier                  = 0.5f;
-static CGFloat const    kButtonTitleSize                        = 20.0f;
-static CGFloat const    kTitleFontSize                          = 20.0f;
-static CGFloat const    kAlertViewCornerRadius                  = 20.0f;
-static CGFloat const    kAlertViewMargin                        = 50.0f;
+static NSUInteger const kButtonLeftIndex = 1;
+static NSUInteger const kButtonMiddleIndex = 2;
+static NSUInteger const kButtonRightIndex = 3;
+static CGFloat const kButtonHeight = 50.0f;
+static CGFloat const kButtonWidthMultiplier = 0.5f;
+static CGFloat const kButtonTitleSize = 20.0f;
+static CGFloat const kTitleFontSize = 20.0f;
+static CGFloat const kAlertViewCornerRadius = 20.0f;
+static CGFloat const kAlertViewMargin = 50.0f;
 
-@interface ZXWAlertView()
 
-@property (nonatomic, copy) void(^complete)(NSUInteger index);
-@property (nonatomic, copy) NSString                            *title;
-@property (nonatomic, copy) NSString                            *content;
-@property (nonatomic, copy) NSString                            *leftButtonTitle;
-@property (nonatomic, copy) NSString                            *middleButtonTitle;
-@property (nonatomic, copy) NSString                            *rightButtonTitle;
-@property (nonatomic, strong) UIWindow                          *showWindow;
-@property (nonatomic, weak) UILabel                             *contentLabel;
+@interface ZXWAlertView ()
+
+@property (nonatomic, copy) void (^complete)(NSUInteger index);
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *content;
+@property (nonatomic, copy) NSString *leftButtonTitle;
+@property (nonatomic, copy) NSString *middleButtonTitle;
+@property (nonatomic, copy) NSString *rightButtonTitle;
+@property (nonatomic, strong) UIWindow *showWindow;
+@property (nonatomic, weak) UILabel *contentLabel;
 
 @end
+
 
 @implementation ZXWAlertView
 
@@ -52,7 +54,7 @@ static CGFloat const    kAlertViewMargin                        = 50.0f;
     [self setupTitleLabel];
     [self setupContentLabel];
     [self setupLeftButton];
-//    [self setupMiddleButton];
+    //    [self setupMiddleButton];
     [self setupRightButton];
 }
 
@@ -65,7 +67,7 @@ static CGFloat const    kAlertViewMargin                        = 50.0f;
         label.textAlignment = NSTextAlignmentCenter;
         [label sizeToFit];
         [self addSubview:label];
-        
+
         NSArray *h = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[label]-|" options:NSLayoutFormatAlignAllCenterX metrics:nil views:NSDictionaryOfVariableBindings(label)];
         NSArray *v = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[label]" options:NSLayoutFormatAlignAllTop metrics:nil views:NSDictionaryOfVariableBindings(label)];
         label.translatesAutoresizingMaskIntoConstraints = NO;
@@ -84,7 +86,7 @@ static CGFloat const    kAlertViewMargin                        = 50.0f;
     [label sizeToFit];
     [self addSubview:label];
     self.contentLabel = label;
-    
+
     NSArray *h = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[label]-|" options:NSLayoutFormatAlignAllCenterX metrics:nil views:NSDictionaryOfVariableBindings(label)];
     NSArray *v = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[label]" options:NSLayoutFormatAlignAllTop metrics:nil views:NSDictionaryOfVariableBindings(label)];
     label.translatesAutoresizingMaskIntoConstraints = NO;
@@ -97,16 +99,16 @@ static CGFloat const    kAlertViewMargin                        = 50.0f;
         UIButton *button = [self buttonWithTitle:self.leftButtonTitle];
         button.tag = kButtonLeftIndex;
         [self addSubview:button];
-        
+
         NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
         NSLayoutConstraint *lead = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
         NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:kButtonWidthMultiplier constant:0];
         NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:kButtonHeight];
         NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:10];
-        
+
         button.translatesAutoresizingMaskIntoConstraints = NO;
         [button addConstraint:height];
-        [self addConstraints:@[bottom, lead, width, top]];
+        [self addConstraints:@[ bottom, lead, width, top ]];
     }
 }
 
@@ -115,15 +117,15 @@ static CGFloat const    kAlertViewMargin                        = 50.0f;
         UIButton *button = [self buttonWithTitle:self.middleButtonTitle];
         button.tag = kButtonMiddleIndex;
         [self addSubview:button];
-        
+
         NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
         NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
         NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:kButtonWidthMultiplier constant:0];
         NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:kButtonHeight];
-        
+
         button.translatesAutoresizingMaskIntoConstraints = NO;
         [button addConstraint:height];
-        [self addConstraints:@[bottom, centerX, width]];
+        [self addConstraints:@[ bottom, centerX, width ]];
     }
 }
 
@@ -132,16 +134,16 @@ static CGFloat const    kAlertViewMargin                        = 50.0f;
         UIButton *button = [self buttonWithTitle:self.rightButtonTitle];
         button.tag = kButtonRightIndex;
         [self addSubview:button];
-        
+
         CGFloat offset = 1.0f / [UIScreen mainScreen].scale;
         NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
         NSLayoutConstraint *trail = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
         NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:kButtonWidthMultiplier constant:offset];
         NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:kButtonHeight];
-        
+
         button.translatesAutoresizingMaskIntoConstraints = NO;
         [button addConstraint:height];
-        [self addConstraints:@[bottom, trail, width]];
+        [self addConstraints:@[ bottom, trail, width ]];
     }
 }
 
@@ -160,19 +162,19 @@ static CGFloat const    kAlertViewMargin                        = 50.0f;
     _showWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _showWindow.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
     _showWindow.windowLevel = UIWindowLevelAlert;
-    
+
     _showWindow.hidden = NO;
     [_showWindow addGestureRecognizer:({
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                               action:@selector(tapGesture:)];
-        
+
         tap;
     })];
-    
+
     self.backgroundColor = [UIColor whiteColor];
     self.layer.borderWidth = 1.0f / [UIScreen mainScreen].scale;
     self.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    
+
     [_showWindow addSubview:self];
     [self setupLayoutConstrait];
 }
@@ -181,9 +183,9 @@ static CGFloat const    kAlertViewMargin                        = 50.0f;
     NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
     NSLayoutConstraint *lead = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeLeading multiplier:1 constant:kAlertViewMargin];
     NSLayoutConstraint *trail = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.showWindow attribute:NSLayoutAttributeTrailing multiplier:1 constant:-kAlertViewMargin];
-    
+
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.showWindow addConstraints:@[centerY, lead, trail]];
+    [self.showWindow addConstraints:@[ centerY, lead, trail ]];
 }
 
 - (void)tapGesture:(UITapGestureRecognizer *)sender {
@@ -193,11 +195,10 @@ static CGFloat const    kAlertViewMargin                        = 50.0f;
 }
 
 - (void)buttonClick:(UIButton *)sender {
-    
     [self removeFromSuperview];
     self.showWindow.hidden = YES;
     self.showWindow = nil;
-    
+
     if (self.complete) {
         self.complete(sender.tag);
     }

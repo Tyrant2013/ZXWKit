@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface UIImage (FitSize)
 
 ///  处理像素对齐的问题

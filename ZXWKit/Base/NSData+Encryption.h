@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface NSData (Encryption)
 
 - (NSData *)zxw_AES128EncryptedWithKey:(NSString *)key;

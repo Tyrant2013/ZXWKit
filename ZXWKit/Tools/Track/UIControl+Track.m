@@ -9,7 +9,8 @@
 #import <objc/message.h>
 #import <UIKit/UIKit.h>
 
-@implementation UIControl(Track)
+
+@implementation UIControl (Track)
 
 + (void)load {
 #ifdef DEBUG
@@ -24,12 +25,11 @@
     Class class = [self class];
     SEL originalSelector = @selector(sendAction:to:forEvent:);
     SEL swizzledSelector = @selector(zxw_sendAction:to:forEvent:);
-    
+
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
     Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-    
-    method_exchangeImplementations(originalMethod, swizzledMethod);
 
+    method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
 - (void)zxw_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {

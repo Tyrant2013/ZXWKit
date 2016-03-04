@@ -8,6 +8,7 @@
 
 #import "UIImage+FitSize.h"
 
+
 @implementation UIImage (FitSize)
 
 - (UIImage *)zxw_fitSize:(CGSize)size {

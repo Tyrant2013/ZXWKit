@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface UIColor (Extern)
 
 + (UIColor *)zxw_colorWithHexString:(NSString *)hexString;
++ (UIColor *)zxw__colorWithHexString:(NSString *)hexString;
 + (UIColor *)zxw_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 
 - (UIImage *)zxw_imageWithSize:(CGSize)size;
+- (UIImage *)zxw_imageWithSize:(CGSize)size cornerRadius:(CGFloat)radius;
 
 @end

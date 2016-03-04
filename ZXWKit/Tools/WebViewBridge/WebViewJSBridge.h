@@ -12,12 +12,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
 @interface WebViewJSBridge : NSObject <UIWebViewDelegate>
 
-@property (nonatomic, weak) UIWebView                           *webView;
+@property (nonatomic, weak) UIWebView *webView;
 
-+ (instancetype)bridgeForWebView:(UIWebView*)webView webViewDelegate:(NSObject<UIWebViewDelegate>*)webViewDelegate;
-+ (instancetype)bridgeForWebView:(UIWebView*)webView webViewDelegate:(NSObject<UIWebViewDelegate>*)webViewDelegate resourceBundle:(NSBundle*)bundle;
++ (instancetype)bridgeForWebView:(UIWebView *)webView webViewDelegate:(NSObject<UIWebViewDelegate> *)webViewDelegate;
++ (instancetype)bridgeForWebView:(UIWebView *)webView webViewDelegate:(NSObject<UIWebViewDelegate> *)webViewDelegate resourceBundle:(NSBundle *)bundle;
 
 - (void)excuteJSWithObj:(NSString *)obj function:(NSString *)function;
 

@@ -9,14 +9,13 @@
 #import "UIView_BaseTests.h"
 #import <ZXWKit/UIView+Base.h>
 
+
 @implementation UIView_BaseTest
 
 - (void)setUp {
-    
 }
 
 - (void)tearDown {
-    
 }
 
 - (void)testX {

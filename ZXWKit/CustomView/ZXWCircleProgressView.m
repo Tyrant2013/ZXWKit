@@ -8,13 +8,15 @@
 
 #import "ZXWCircleProgressView.h"
 
-static CGFloat const kAnimationDuration                                 = 0.25f;
+static CGFloat const kAnimationDuration = 0.25f;
 
-@interface ZXWCircleProgressView()
 
-@property (nonatomic, strong) CAShapeLayer                              *shapeLayer;
+@interface ZXWCircleProgressView ()
+
+@property (nonatomic, strong) CAShapeLayer *shapeLayer;
 
 @end
+
 
 @implementation ZXWCircleProgressView
 
@@ -24,8 +26,8 @@ static CGFloat const kAnimationDuration                                 = 0.25f;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-//        [self p_setup];
-//        [self p_setupAnimation];
+        //        [self p_setup];
+        //        [self p_setupAnimation];
         self.backgroundColor = [UIColor whiteColor];
     }
     return self;
@@ -48,7 +50,6 @@ static CGFloat const kAnimationDuration                                 = 0.25f;
 }
 
 - (void)p_setup {
-    
     if (_shapeLayer != nil) {
         return;
     }
@@ -57,7 +58,7 @@ static CGFloat const kAnimationDuration                                 = 0.25f;
     _shapeLayer.position = (CGPoint){CGRectGetWidth(self.bounds) / 2, CGRectGetHeight(self.bounds) / 2};
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
     _shapeLayer.path = bezierPath.CGPath;
-    
+
     [self.layer addSublayer:_shapeLayer];
 }
 

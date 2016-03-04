@@ -9,6 +9,7 @@
 #import "UITableView+CalculateCellHeight.h"
 #import <objc/runtime.h>
 
+
 @implementation UITableView (CalculateCellHeight)
 
 - (CGFloat)zxw_heightForIdentifier:(NSString *)identifier cacheKey:(NSString *)cahceKey configuration:(void (^)(id cell))configuration {
@@ -19,13 +20,13 @@
     if (!cell) {
         return 0.0f;
     }
-    
+
     [cell prepareForReuse];
-    
+
     if (configuration) {
         configuration(cell);
     }
-    
+
     CGFloat width = CGRectGetWidth(self.bounds);
     NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:cell.contentView
                                                                        attribute:NSLayoutAttributeWidth

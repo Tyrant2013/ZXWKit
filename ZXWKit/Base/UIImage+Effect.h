@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface UIImage (Effect)
 
 - (UIImage *)zxw_applyLightEffect;
@@ -15,9 +16,9 @@
 - (UIImage *)zxw_applyDarkEffect;
 - (UIImage *)zxw_applyTintEffectWithColor:(UIColor *)tintColor;
 - (UIImage *)zxw_applyBlurWithRadius:(CGFloat)blurRadius
-                       tintColor:(UIColor *)tintColor
-           saturationDeltaFactor:(CGFloat)saturationDeltaFactor
-                       maskImage:(UIImage *)maskImage;
+                           tintColor:(UIColor *)tintColor
+               saturationDeltaFactor:(CGFloat)saturationDeltaFactor
+                           maskImage:(UIImage *)maskImage;
 
 
 - (UIImage *)zxw_boxblurImageWithBlur:(CGFloat)blur;
